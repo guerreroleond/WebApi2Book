@@ -1,4 +1,8 @@
-﻿if not exists (select * from [User] where Username = 'bhogg')
+﻿declare @statusId int,
+@taskId int,
+@userId int
+
+if not exists (select * from [User] where Username = 'bhogg')
 	INSERT into [dbo].[User] ([Firstname], [Lastname], [Username])
 		VALUES (N'Boss', N'Hogg', N'bhogg')
 if not exists (select * from [User] where Username = 'jbob')
